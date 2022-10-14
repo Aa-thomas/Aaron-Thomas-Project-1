@@ -5,6 +5,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Contact</title>
+   <script src="https://kit.fontawesome.com/9e29c23d4f.js" crossorigin="anonymous"></script>
    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
@@ -28,20 +29,41 @@
       </div><!-- END .wrapper -->
    </header><!-- END Header -->
    <section class="contact">
+      <div class="wrapper">
 
-      <form action="#" method="POST">
-         <label for="name" class="sr-only">Name</label>
-         <input type="text" name="name" id="name" placeholder="Name" required>
+         <!-- Contact Info -->
+         <div class="contact-info">
+            
+            <div class="icons">
+               <i class="fa-brands fa-facebook-f"></i>
+               <i class="fa-brands fa-instagram"></i>
+               <i class="fa-brands fa-twitter"></i>
+               <i class="fa-solid fa-phone"></i>
+            </div>
+            <p><span>info@email.com</span></p>
+            <p>123-456-7890</p>
+            <p>123 Queen Street West, Unit 10</p>
+            <p>Toronto, ON</p>
+            <p>M5V 2D5</p>
 
-         <label for="email" class="sr-only">Email</label>
-         <input type="email" name="email" id="email" placeholder="Email" required>
+         </div>
 
-         <label for="message" class="sr-only">Message</label>
-         <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
 
-         <button type="submit" value="Submit">Submit</button>
-      </form>
+         <!-- Contact Form -->
+         <form action="#" method="POST">
+            <label for="name" class="sr-only">Name</label>
+            <input type="text" name="name" id="name" placeholder="Name" required>
+   
+            <label for="email" class="sr-only">Email</label>
+            <input type="email" name="email" id="email" placeholder="Email" required>
+   
+            <label for="message" class="sr-only">Message</label>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" required></textarea>
+   
+            <button type="submit" value="Submit">Submit</button>
+         </form>
 
+      </div>
    </section>
    <footer>Copyright @ 2019 HackerYou</footer>
 </body>
