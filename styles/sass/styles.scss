@@ -2,5 +2,12 @@
 @use './partials/global/variables';
 @use './partials/global/base-styles';
 @use './partials/global/typography';
-@use './partials/home/header';
+
+// Home
+@use './partials/home/home-header';
 @use './partials/home/features';
+
+// Contact
+@use './partials/contact/header';
+
+// Blog

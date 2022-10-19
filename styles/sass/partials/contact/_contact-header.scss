@@ -1,0 +1,37 @@
+@use '../global/variables' as v;
+
+.contact-header {
+      background-image: url(../Boat-Ride-Adventures-final-assets/contact-header.jpg);
+      background-size: cover;
+      background-position: top;
+      background-repeat: no-repeat;
+      height: 85vh;
+      position: relative;
+      transition: 0.2s;
+   
+      ul {
+         display: flex;
+         color: #fff;
+         gap: 50px;
+   
+         li {
+            margin: 60px 0;
+            padding: 0 3px 3px 3px;
+            transition: 0.2s;
+            &:hover, &:focus {
+               border-bottom: 2px solid v.$dandelion;
+            }
+         }
+      }
+   
+      h1 {
+         color: v.$dandelion;
+         text-transform: uppercase;
+         width:50%;
+         transition: 0.2s;
+         position: absolute;
+         bottom: 0;
+         margin: 20px;
+   
+      }
+}

@@ -2,21 +2,45 @@
 .features {
    background-color: v.$iceblue;
    
-   .wrapper {
+   .text-container-flex {
       display: flex;
       flex-wrap: wrap;
+      gap: 50px;
+      margin: 50px 0;
    }
 
-   .feature-text-container {
-      width: 50%;
+   .text-container {
+      width: calc(50% - 25px);
+      position: relative;
+      left: 50px;
       
       h2 {
          text-transform: uppercase;
+         margin-bottom: 10px;
       }
 
       p {
          font-size: 0.8rem;
          font-weight: 400;
+      }
+
+      i {
+         display: inline-block;
+         color: v.$twilightblue;
+         background-color: v.$dandelion;
+         border-radius: 50%;
+         padding: 8px;
+         height: 40px;
+         width: 40px;
+         text-align: center;
+         position: absolute;
+         top: 5px;
+         left: -50px;
+
+         .fa-users {
+
+         }
+
       }
    }
 }
