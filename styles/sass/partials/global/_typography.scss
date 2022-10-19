@@ -19,7 +19,7 @@ h1, h2, h3, h4, blockquote {
 }
 
 h1 {
-   font-size: 4rem
+   font-size: 3.7rem
 }
 
 h2 {
@@ -36,12 +36,13 @@ h4 {
 
 p {
    font-size: 1rem;
+   font-weight: 700;
 }
 
 nav {
    font-family: v.$bodyfont;
    font-weight: 700;
-   font-size: 1.2rem;
+   font-size: 0.8rem;
 }
 
 ul, li, a, input, p {

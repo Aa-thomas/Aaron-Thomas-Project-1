@@ -228,7 +228,7 @@ html {
 
 .wrapper {
   max-width: 1260px;
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -268,6 +268,10 @@ img {
      object-position: center;
 }
 
+section {
+  padding: 100px 0;
+}
+
 html {
   font-size: 125%;
 }
@@ -285,7 +289,7 @@ h1, h2, h3, h4, blockquote {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3.7rem;
 }
 
 h2 {
@@ -302,12 +306,13 @@ h4 {
 
 p {
   font-size: 1rem;
+  font-weight: 700;
 }
 
 nav {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
 }
 
 ul, li, a, input, p {
@@ -323,4 +328,101 @@ a {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+}
+
+.home-header {
+  background-image: url(../Boat-Ride-Adventures-final-assets/home-header.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  height: 85vh;
+  position: relative;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  /*** MEDIA QUERIES ***/
+}
+.home-header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  gap: 50px;
+}
+.home-header ul li {
+  margin: 60px 0;
+  padding: 0 3px 3px 3px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.home-header ul li:hover, .home-header ul li:focus {
+  border-bottom: 2px solid #fdd908;
+}
+.home-header h1 {
+  color: #fdd908;
+  text-transform: uppercase;
+  width: 50%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  position: absolute;
+  bottom: 0;
+  margin: 20px;
+}
+.home-header .img-container {
+  min-width: 300px;
+  width: clamp(300px, 40%, 600px);
+  position: absolute;
+  right: 0;
+  bottom: -100px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+@media (max-width: 1120px) {
+  .home-header {
+    height: 100vh;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  .home-header .img-container {
+    bottom: 0;
+  }
+  .home-header h1 {
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    width: 70%;
+    font-size: clamp(2.5rem, 7vw, 3.7rem);
+  }
+}
+@media (max-width: 950px) {
+  .home-header h1 {
+    font-size: clamp(1.7rem, 9vw, 3.7rem);
+    translate: 0 -48vh;
+  }
+}
+@media (max-width: 768px) {
+  .home-header h1 {
+    text-align: center;
+  }
+  .home-header ul {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 20px;
+  }
+}
+
+.features {
+  background-color: #eafefc;
+}
+.features .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.features .feature-text-container {
+  width: 50%;
+}
+.features .feature-text-container h2 {
+  text-transform: uppercase;
 }

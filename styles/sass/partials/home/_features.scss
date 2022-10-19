@@ -1,0 +1,17 @@
+@use '../global/variables' as v;
+.features {
+   background-color: v.$iceblue;
+   
+   .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+   }
+
+   .feature-text-container {
+      width: 50%;
+      
+      h2 {
+         text-transform: uppercase;
+      }
+   }
+}

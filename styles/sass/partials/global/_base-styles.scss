@@ -2,7 +2,7 @@
 
 .wrapper{
    max-width: 1260px;
-   width: 90%;
+   width: 80%;
    margin: 0 auto;
 }
 
@@ -38,4 +38,8 @@ img {
    display: block;
    object-fit: cover;
    object-position: center;
+}
+
+section {
+   padding: 100px 0;
 }
