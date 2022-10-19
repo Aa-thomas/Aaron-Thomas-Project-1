@@ -1,0 +1,54 @@
+@use '../global/variables' as v;
+
+.contact-form {
+   background-color: v.$iceblue;
+   
+   .wrapper {
+      display: flex;
+   }
+
+   form {
+      display: flex;
+      flex-direction: column;
+      padding: 50px;
+      background-color: v.$twilightblue;
+      gap: 20px;
+      box-shadow: 20px 20px v.$dandelion;
+      width: 65%;
+
+      .name-email-flex {
+         display: flex;
+         justify-content: space-between;
+      }
+
+      input, textarea {
+         background-color: v.$twilightblue;
+         color: #fff;
+         border: none;
+         border-bottom: solid 2px v.$dandelion;
+      }
+
+      textarea {
+         border: solid 2px v.$dandelion;
+         padding: 20px;
+      }
+
+      input#name, input#email {
+         width: 48%;
+         padding: 10px 20px;
+         color: rgba(255, 255, 255, );
+         opacity: 10;
+         transition: 0.2s;
+         &:focus, &:hover {
+            
+         }
+      }
+
+      button {
+         border: none;
+         text-transform: uppercase;
+         font-family: 'IM Fell English', serif;
+      }
+      
+   }
+}

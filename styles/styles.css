@@ -473,6 +473,8 @@ a {
 }
 .contact-header ul li:hover, .contact-header ul li:focus {
   border-bottom: 2px solid #fdd908;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 .contact-header h1 {
   color: #fdd908;
@@ -483,4 +485,59 @@ a {
   position: absolute;
   bottom: 0;
   margin: 20px;
+}
+
+.contact-form {
+  background-color: #eafefc;
+}
+.contact-form .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.contact-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 50px;
+  background-color: #0d457f;
+  gap: 20px;
+  -webkit-box-shadow: 20px 20px #fdd908;
+          box-shadow: 20px 20px #fdd908;
+  width: 65%;
+}
+.contact-form form .name-email-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.contact-form form input, .contact-form form textarea {
+  background-color: #0d457f;
+  color: #fff;
+  border: none;
+  border-bottom: solid 2px #fdd908;
+}
+.contact-form form textarea {
+  border: solid 2px #fdd908;
+  padding: 20px;
+}
+.contact-form form input#name, .contact-form form input#email {
+  width: 48%;
+  padding: 10px 20px;
+  color: rgb(255, 255, 255);
+  opacity: 10;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.contact-form form button {
+  border: none;
+  text-transform: uppercase;
+  font-family: "IM Fell English", serif;
 }

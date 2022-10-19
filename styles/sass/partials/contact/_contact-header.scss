@@ -20,6 +20,7 @@
             transition: 0.2s;
             &:hover, &:focus {
                border-bottom: 2px solid v.$dandelion;
+               transform: scale(1.1);
             }
          }
       }
