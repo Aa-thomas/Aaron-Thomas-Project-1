@@ -426,3 +426,7 @@ a {
 .features .feature-text-container h2 {
   text-transform: uppercase;
 }
+.features .feature-text-container p {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
