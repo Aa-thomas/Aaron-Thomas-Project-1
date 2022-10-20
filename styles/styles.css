@@ -272,6 +272,13 @@ section {
   padding: 100px 0;
 }
 
+footer {
+  background-color: #fdd908;
+  color: #0d457f;
+  text-align: center;
+  padding: 5px;
+}
+
 html {
   font-size: 125%;
 }
@@ -453,7 +460,7 @@ a {
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
-  height: 85vh;
+  height: 75vh;
   position: relative;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -479,16 +486,17 @@ a {
 .contact-header h1 {
   color: #fdd908;
   text-transform: uppercase;
-  width: 50%;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   position: absolute;
-  bottom: 0;
+  top: 20vh;
   margin: 20px;
+  color: #ffffff;
 }
 
 .contact-form {
   background-color: #eafefc;
+  padding-bottom: 150px;
 }
 .contact-form .wrapper {
   display: -webkit-box;
@@ -505,10 +513,14 @@ a {
           flex-direction: column;
   padding: 50px;
   background-color: #0d457f;
-  gap: 20px;
+  gap: 50px;
   -webkit-box-shadow: 20px 20px #fdd908;
           box-shadow: 20px 20px #fdd908;
-  width: 65%;
+  width: 55%;
+  min-width: 500px;
+  position: absolute;
+  top: 320px;
+  right: 100px;
 }
 .contact-form form .name-email-flex {
   display: -webkit-box;
@@ -536,8 +548,22 @@ a {
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
+.contact-form form input#name:focus, .contact-form form input#name:hover, .contact-form form input#email:focus, .contact-form form input#email:hover {
+  border-bottom-width: 5px;
+}
 .contact-form form button {
   border: none;
   text-transform: uppercase;
   font-family: "IM Fell English", serif;
+}
+.contact-form i {
+  margin-right: 20px;
+  color: #0d457f;
+}
+.contact-form span {
+  display: inline-block;
+  padding: 20px 0;
+}
+.contact-form p {
+  margin-bottom: 5px;
 }

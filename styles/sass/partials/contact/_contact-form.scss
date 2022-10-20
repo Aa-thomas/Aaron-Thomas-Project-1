@@ -2,9 +2,11 @@
 
 .contact-form {
    background-color: v.$iceblue;
+   padding-bottom: 150px;
    
    .wrapper {
       display: flex;
+      // position: relative;
    }
 
    form {
@@ -12,9 +14,13 @@
       flex-direction: column;
       padding: 50px;
       background-color: v.$twilightblue;
-      gap: 20px;
+      gap: 50px;
       box-shadow: 20px 20px v.$dandelion;
-      width: 65%;
+      width: 55%;
+      min-width: 500px;
+      position: absolute;
+      top: 320px;
+      right: 100px;
 
       .name-email-flex {
          display: flex;
@@ -40,15 +46,29 @@
          opacity: 10;
          transition: 0.2s;
          &:focus, &:hover {
-            
+            border-bottom-width: 5px;
          }
       }
 
       button {
          border: none;
          text-transform: uppercase;
-         font-family: 'IM Fell English', serif;
+         font-family: v.$headingfont;
       }
       
+   }
+
+   i {
+      margin-right: 20px;
+      color: v.$twilightblue;
+   }
+
+   span {
+      display: inline-block;
+      padding: 20px 0;
+   }
+
+   p {
+      margin-bottom: 5px;
    }
 }

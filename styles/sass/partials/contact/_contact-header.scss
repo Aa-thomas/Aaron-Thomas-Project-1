@@ -5,7 +5,7 @@
       background-size: cover;
       background-position: top;
       background-repeat: no-repeat;
-      height: 85vh;
+      height: 75vh;
       position: relative;
       transition: 0.2s;
    
@@ -28,11 +28,10 @@
       h1 {
          color: v.$dandelion;
          text-transform: uppercase;
-         width:50%;
          transition: 0.2s;
          position: absolute;
-         bottom: 0;
+         top: 20vh;
          margin: 20px;
-   
+         color: v.$white;
       }
 }
