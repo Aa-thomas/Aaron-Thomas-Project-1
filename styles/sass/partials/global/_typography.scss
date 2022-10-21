@@ -19,11 +19,13 @@ h1, h2, h3, h4, blockquote {
 }
 
 h1 {
-   font-size: 3.7rem
+   font-size: 3.7rem;
+   text-transform: uppercase;
 }
 
 h2 {
    font-size: clamp(1.5rem, 3vw, 2rem);
+   text-transform: uppercase;
 }
 
 h3 {
