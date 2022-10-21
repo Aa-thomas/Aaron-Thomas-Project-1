@@ -26,6 +26,7 @@
       }
    
       h1 {
+         font-size: clamp(2.7rem, 8vw, 3.7rem);
          color: v.$dandelion;
          text-transform: uppercase;
          transition: 0.2s;
@@ -33,5 +34,18 @@
          top: 20vh;
          margin: 20px;
          color: v.$white;
+      }
+
+      @media (max-width: 768px) {
+         h1 {
+            font-size: clamp(2.2rem, 10vw, 3.7rem);
+            position: absolute;
+            top: 40%;
+         }
+
+         ul {
+            justify-content: space-between;
+            gap: 4%;
+         }
       }
 }
