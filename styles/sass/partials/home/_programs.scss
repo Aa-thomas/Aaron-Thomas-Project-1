@@ -1,0 +1,109 @@
+@use '../global/variables' as v; 
+
+.programs {
+   background-color: v.$twilightblue;
+   color: white;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   padding: 0;
+
+   h2 {
+      color: v.$white;
+      text-transform: uppercase;
+      font-size: clamp(1.5rem, 3vw, 2rem);
+   }
+
+   .flex-container-left, .flex-container-right {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+      gap: 40px;
+      transition: 0.2s;
+   }
+
+   .img-container-left {
+      box-shadow: 20px 20px v.$dandelion;
+      position: relative;
+      bottom: 20px;
+   }
+
+   .img-container-right {
+      box-shadow: -20px 20px v.$dandelion;
+      position: relative;
+      top: 80px;
+   }
+   
+   .text-container-left, .text-container-right {
+      text-align: justify;
+      margin: 20px 0;
+      h2 {
+         margin-bottom: 20px;
+      }
+
+      p {
+         margin-bottom: 60px;
+      }
+
+      .button:hover, .button:focus {
+         transform: scale(1.03);
+      }
+   }
+
+   .text-container-right {
+      padding-right: 100px;
+      margin: 0;
+
+      h2 {
+         margin-top: 40px;
+      }
+   }
+
+   .text-container-left {
+      text-align-last: right;
+      padding-left: 100px;
+      a {
+         position: relative;
+         bottom: 15px;
+      }
+   }
+
+   @media (max-width: 1000px) {
+
+      .flex-container-left, .flex-container-right {
+         transition: 0.2s;
+         width: 45%;
+      }
+   }
+
+   @media (max-width: 768px) {
+      flex-direction: column;
+
+      .flex-container-left, .flex-container-right {
+         transition: 0.2s;
+         width: 85%;
+         justify-content: center;
+         align-items: center;
+      }
+
+      .text-container-left, .text-container-right {
+         text-align-last: center;
+         padding: 0;
+         margin-left: 15%;         
+      }
+
+      .flex-container-right {
+         flex-direction: column-reverse;
+      }
+
+      .img-container-right {
+         position:relative;
+         left: 80px;
+         margin-bottom: 80px;
+      }
+
+      .text-container-right {
+         margin-bottom: 40px;
+      }
+   }
+}

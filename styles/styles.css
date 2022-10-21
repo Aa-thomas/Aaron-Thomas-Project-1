@@ -236,18 +236,13 @@ button, .button {
   color: #0d457f;
   background-color: #fdd908;
   padding: 18px 36px;
-  font-size: 0.8rem;
-  font-weight: bold;
-  line-height: 1.2rem;
-  text-align: center;
   cursor: pointer;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 button:hover, button:focus, .button:hover, .button:focus {
   background-color: white;
   color: #0d457f;
-  border: 2px solid #0d457f;
 }
 button.secondary, .button.secondary {
   color: white;
@@ -301,7 +296,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.1rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
 h3 {
@@ -314,7 +309,7 @@ h4 {
 
 p {
   font-size: clamp(0.8rem, 1.6vw, 1rem);
-  font-weight: 700;
+  font-weight: 400;
 }
 
 nav {
@@ -336,6 +331,15 @@ a {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+}
+
+button, .button {
+  font-size: 0.8rem;
+  font-weight: bold;
+  font-family: "IM Fell English", serif;
+  line-height: 1.2rem;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .home-header {
@@ -364,6 +368,8 @@ a {
 }
 .home-header ul li:hover, .home-header ul li:focus {
   border-bottom: 2px solid #fdd908;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 .home-header h1 {
   color: #fdd908;
@@ -439,10 +445,6 @@ a {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-.features .text-container p {
-  font-size: 0.8rem;
-  font-weight: 400;
-}
 .features .text-container i {
   display: inline-block;
   color: #0d457f;
@@ -456,6 +458,146 @@ a {
   top: 5px;
   left: -50px;
 }
+@media (max-width: 768px) {
+  .features .text-container-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .features .text-container {
+    width: 90%;
+  }
+  .features h2 {
+    font-size: 1.5rem;
+  }
+  .features p {
+    font-size: clamp(0.8rem, 2.5vw, 1.2rem);
+  }
+}
+
+.programs {
+  background-color: #0d457f;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0;
+}
+.programs h2 {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+.programs .flex-container-left, .programs .flex-container-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40%;
+  gap: 40px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.programs .img-container-left {
+  -webkit-box-shadow: 20px 20px #fdd908;
+          box-shadow: 20px 20px #fdd908;
+  position: relative;
+  bottom: 20px;
+}
+.programs .img-container-right {
+  -webkit-box-shadow: -20px 20px #fdd908;
+          box-shadow: -20px 20px #fdd908;
+  position: relative;
+  top: 80px;
+}
+.programs .text-container-left, .programs .text-container-right {
+  text-align: justify;
+  margin: 20px 0;
+}
+.programs .text-container-left h2, .programs .text-container-right h2 {
+  margin-bottom: 20px;
+}
+.programs .text-container-left p, .programs .text-container-right p {
+  margin-bottom: 60px;
+}
+.programs .text-container-left .button:hover, .programs .text-container-left .button:focus, .programs .text-container-right .button:hover, .programs .text-container-right .button:focus {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+.programs .text-container-right {
+  padding-right: 100px;
+  margin: 0;
+}
+.programs .text-container-right h2 {
+  margin-top: 40px;
+}
+.programs .text-container-left {
+  -moz-text-align-last: right;
+       text-align-last: right;
+  padding-left: 100px;
+}
+.programs .text-container-left a {
+  position: relative;
+  bottom: 15px;
+}
+@media (max-width: 1000px) {
+  .programs .flex-container-left, .programs .flex-container-right {
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    width: 45%;
+  }
+}
+@media (max-width: 768px) {
+  .programs {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .programs .flex-container-left, .programs .flex-container-right {
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    width: 85%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .programs .text-container-left, .programs .text-container-right {
+    -moz-text-align-last: center;
+         text-align-last: center;
+    padding: 0;
+    margin-left: 15%;
+  }
+  .programs .flex-container-right {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .programs .img-container-right {
+    position: relative;
+    left: 80px;
+    margin-bottom: 80px;
+  }
+  .programs .text-container-right {
+    margin-bottom: 40px;
+  }
+}
+
 .contact-header {
   background-image: url(../Boat-Ride-Adventures-final-assets/contact-header.jpg);
   background-size: cover;
