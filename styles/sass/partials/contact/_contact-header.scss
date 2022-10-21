@@ -41,11 +41,22 @@
             font-size: clamp(2.2rem, 10vw, 3.7rem);
             position: absolute;
             top: 40%;
+            left: 0;
+            width: 100%;
+            margin: 20px 0;
+            text-align: center;
+            
          }
 
          ul {
             justify-content: space-between;
             gap: 4%;
+         }
+      }
+
+      @media (max-width: 387px) {
+         h1 {
+            // left: 20%;
          }
       }
 }
