@@ -293,12 +293,10 @@ h1, h2, h3, h4, blockquote {
 
 h1 {
   font-size: 3.7rem;
-  text-transform: uppercase;
 }
 
 h2 {
   font-size: clamp(1.5rem, 3vw, 2rem);
-  text-transform: uppercase;
 }
 
 h3 {
@@ -613,6 +611,18 @@ button, .button {
 }
 .gallery .img-container {
   width: 30%;
+}
+@media (max-width: 768px) {
+  .gallery .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 40px;
+  }
+  .gallery .img-container {
+    width: 100%;
+  }
 }
 
 .contact-header {

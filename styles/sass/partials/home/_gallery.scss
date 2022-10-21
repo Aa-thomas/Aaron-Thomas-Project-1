@@ -10,4 +10,15 @@
    .img-container {
       width: 30%;
    }
+
+   @media (max-width: 768px) {
+      .wrapper {
+         flex-direction: column;
+         gap: 40px;
+      }
+
+      .img-container {
+         width: 100%;
+      }
+   }
 }
