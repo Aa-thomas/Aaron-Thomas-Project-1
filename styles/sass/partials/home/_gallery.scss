@@ -1,0 +1,13 @@
+@use '../global/variables' as v;
+
+.gallery {
+   background-color: v.$twilightblue;
+   .wrapper {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   .img-container {
+      width: 30%;
+   }
+}
