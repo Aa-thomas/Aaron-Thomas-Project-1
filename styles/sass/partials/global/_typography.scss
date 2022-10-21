@@ -23,7 +23,7 @@ h1 {
 }
 
 h2 {
-   font-size: 2.1rem;
+   font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
 h3 {
@@ -35,8 +35,8 @@ h4 {
 }
 
 p {
-   font-size: 1rem;
-   font-weight: 700;
+   font-size: clamp(0.8rem, 1.6vw, 1rem);
+   font-weight: 400;
 }
 
 nav {
@@ -58,6 +58,15 @@ a {
    text-decoration: none;
    color: inherit;
    cursor: pointer;
+}
+
+button, .button {
+   font-size: 0.8rem;
+   font-weight: bold;
+   font-family: v.$headingfont;
+   line-height: 1.2rem;
+   text-align: center;
+   text-transform: uppercase;
 }
 
 

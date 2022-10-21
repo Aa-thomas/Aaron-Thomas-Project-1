@@ -10,16 +10,11 @@ button, .button {
    color: v.$twilightblue;
    background-color: v.$dandelion;
    padding: 18px 36px;
-   font-size: 0.8rem;
-   font-weight: bold;
-   line-height: 1.2rem;
-   text-align: center;
    cursor: pointer;
-   transition: 0.3s;
+   transition: 0.2s;
    &:hover, &:focus {
       background-color: white;
       color: v.$twilightblue;
-      border: 2px solid v.$twilightblue;
    }
    &.secondary {
       color: white;
@@ -49,4 +44,6 @@ footer {
    color: v.$twilightblue;
    text-align: center;
    padding: 5px;
+   font-size: clamp(0.8rem, 1.6vw, 1.2rem);
+
 }
