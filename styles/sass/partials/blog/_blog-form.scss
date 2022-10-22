@@ -1,0 +1,73 @@
+@use '../global/variables' as v;
+
+.blog-form {
+   position: relative;
+   form {
+      display: flex;
+      flex-direction: column;
+      padding-top: 50px;
+      background-color: v.$iceblue;
+      gap: 50px;
+
+      min-width: 400px;
+      max-width: 700px;
+      
+   
+   
+      .name-email-flex {
+         display: flex;
+         justify-content: space-between;
+      }
+   
+      input,
+      textarea {
+         background-color: v.$iceblue;
+         border: none;
+         border-bottom: solid 2px v.$dandelion;
+         font-size: clamp(0.8rem, 1.6vw, 1rem);
+         &::placeholder {
+            color: v.$twilightblue;
+            opacity: 1;
+         }
+      }
+   
+      textarea {
+         border: solid 2px v.$dandelion;
+         padding: 20px;
+         transition: 0.2s;
+         &:focus,&:hover {
+            transform: scale(1.03);
+            border-width: 3px;
+         }
+      }
+   
+      input#name,
+      input#email {
+         width: 48%;
+         padding: 10px 20px;
+         color: rgba(255, 255, 255, );
+         opacity: 10;
+         transition: 0.2s;
+         &:focus,
+         &:hover {
+            transform: scaleX(1.08);
+            border-bottom-width: 3px;
+         }
+      }
+   
+      button {
+         border: none;
+         text-transform: uppercase;
+         font-family: v.$headingfont;
+         &:hover, &:focus {
+            transform: scale(1.03);
+         }
+      }
+   
+      @media (max-width: 768px) {
+         form {
+            width: 100%;
+         }
+      }
+   }
+}

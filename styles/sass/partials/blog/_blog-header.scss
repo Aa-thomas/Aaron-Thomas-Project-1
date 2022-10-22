@@ -1,0 +1,51 @@
+@use '../global/variables' as v;
+
+.blog-header {
+   background-image: url(../Boat-Ride-Adventures-final-assets/blog-header.jpg);
+   background-size: cover;
+   background-position: top;
+   background-repeat: no-repeat;
+   height: 85vh;
+   position: relative;
+   transition: 0.2s;
+
+   ul {
+      display: flex;
+      color: #fff;
+      gap: 50px;
+
+      li {
+         margin: 60px 0;
+         padding: 0 3px 3px 3px;
+         transition: 0.2s;
+         &:hover, &:focus {
+            border-bottom: 2px solid v.$dandelion;
+            transform: scale(1.1);
+         }
+      }
+   }
+
+   h1 {
+      color: v.$white;
+   }
+
+   @media (max-width: 768px) {
+      ul {
+         justify-content: space-between;
+         gap: 4%;
+      }
+
+      h1 {
+         text-align: center;
+      }
+   }
+}
+
+.full-page-flex {
+   display: flex;
+   justify-content: space-between;
+
+   @media (max-width: 768px) {
+      flex-direction: column;
+   }
+}

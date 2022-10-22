@@ -226,6 +226,10 @@ html {
   overflow: hidden;
 }
 
+html {
+  background-color: #eafefc;
+}
+
 .wrapper {
   max-width: 1260px;
   width: 80%;
@@ -246,7 +250,7 @@ button:hover, button:focus, .button:hover, .button:focus {
   border: 2px solid #0d457f;
 }
 button.secondary, .button.secondary {
-  color: white;
+  color: #fdd908;
   background-color: #0d457f;
 }
 button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
@@ -1015,23 +1019,19 @@ button, .button {
 .blog-header h1 {
   color: #ffffff;
 }
-
-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 50px;
-  background-color: #eafefc;
-  gap: 50px;
-  width: 55%;
-  min-width: 400px;
-  max-width: 700px;
+@media (max-width: 768px) {
+  .blog-header ul {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 4%;
+  }
+  .blog-header h1 {
+    text-align: center;
+  }
 }
-form .name-email-flex {
+
+.full-page-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1039,47 +1039,106 @@ form .name-email-flex {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-form input,
-form textarea {
+@media (max-width: 768px) {
+  .full-page-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.comments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.comments .comment-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-display: column;
+  gap: 20px;
+}
+.comments .comment-container .text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.blog-form {
+  position: relative;
+}
+.blog-form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 50px;
+  background-color: #eafefc;
+  gap: 50px;
+  min-width: 400px;
+  max-width: 700px;
+}
+.blog-form form .name-email-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.blog-form form input,
+.blog-form form textarea {
   background-color: #eafefc;
   border: none;
   border-bottom: solid 2px #fdd908;
   font-size: clamp(0.8rem, 1.6vw, 1rem);
 }
-form input::-webkit-input-placeholder, form textarea::-webkit-input-placeholder {
+.blog-form form input::-webkit-input-placeholder, .blog-form form textarea::-webkit-input-placeholder {
   color: #0d457f;
   opacity: 1;
 }
-form input::-moz-placeholder, form textarea::-moz-placeholder {
+.blog-form form input::-moz-placeholder, .blog-form form textarea::-moz-placeholder {
   color: #0d457f;
   opacity: 1;
 }
-form input:-ms-input-placeholder, form textarea:-ms-input-placeholder {
+.blog-form form input:-ms-input-placeholder, .blog-form form textarea:-ms-input-placeholder {
   color: #0d457f;
   opacity: 1;
 }
-form input::-ms-input-placeholder, form textarea::-ms-input-placeholder {
+.blog-form form input::-ms-input-placeholder, .blog-form form textarea::-ms-input-placeholder {
   color: #0d457f;
   opacity: 1;
 }
-form input::placeholder,
-form textarea::placeholder {
+.blog-form form input::placeholder,
+.blog-form form textarea::placeholder {
   color: #0d457f;
   opacity: 1;
 }
-form textarea {
+.blog-form form textarea {
   border: solid 2px #fdd908;
   padding: 20px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
-form textarea:focus, form textarea:hover {
+.blog-form form textarea:focus, .blog-form form textarea:hover {
   -webkit-transform: scale(1.03);
           transform: scale(1.03);
   border-width: 3px;
 }
-form input#name,
-form input#email {
+.blog-form form input#name,
+.blog-form form input#email {
   width: 48%;
   padding: 10px 20px;
   color: rgb(255, 255, 255);
@@ -1087,19 +1146,24 @@ form input#email {
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
-form input#name:focus, form input#name:hover,
-form input#email:focus,
-form input#email:hover {
+.blog-form form input#name:focus, .blog-form form input#name:hover,
+.blog-form form input#email:focus,
+.blog-form form input#email:hover {
   -webkit-transform: scaleX(1.08);
           transform: scaleX(1.08);
   border-bottom-width: 3px;
 }
-form button {
+.blog-form form button {
   border: none;
   text-transform: uppercase;
   font-family: "IM Fell English", serif;
 }
-form button:hover, form button:focus {
+.blog-form form button:hover, .blog-form form button:focus {
   -webkit-transform: scale(1.03);
           transform: scale(1.03);
+}
+@media (max-width: 768px) {
+  .blog-form form form {
+    width: 100%;
+  }
 }
