@@ -1,5 +1,9 @@
 @use './variables' as v;
 
+html {
+   background-color: v.$iceblue;
+}
+
 .wrapper{
    max-width: 1260px;
    width: 80%;
@@ -18,7 +22,7 @@ button, .button {
       border: 2px solid v.$twilightblue;
    }
    &.secondary {
-      color: white;
+      color: v.$dandelion;
       background-color: v.$twilightblue;
       &:hover, &:focus {
          background-color: white;
