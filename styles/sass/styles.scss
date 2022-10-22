@@ -8,9 +8,12 @@
 @use './partials/home/features';
 @use './partials/home/programs';
 @use './partials/home/gallery';
+@use './partials/home/vacation-days';
+@use './partials/home/win-trip';
 
 // Contact
 @use './partials/contact/contact-header';
 @use './partials/contact/contact-form';
 
 // Blog
+@use './partials/blog/blog-header'

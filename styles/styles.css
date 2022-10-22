@@ -243,6 +243,7 @@ button, .button {
 button:hover, button:focus, .button:hover, .button:focus {
   background-color: white;
   color: #0d457f;
+  border: 2px solid #0d457f;
 }
 button.secondary, .button.secondary {
   color: white;
@@ -643,7 +644,108 @@ button, .button {
   bottom: 0;
 }
 .vacation-days .text-container {
-  margin: 50px 0;
+  margin: 50px 0 100px 0;
+}
+
+.win-trip {
+  background-color: #eafefc;
+}
+.win-trip .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.win-trip .img-container {
+  min-width: 300px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.win-trip .text-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 300px;
+  max-height: 300px;
+  margin-left: 10%;
+}
+.win-trip p {
+  font-size: clamp(0.7rem, 1.6vw, 1rem);
+}
+.win-trip h2 {
+  font-size: clamp(1.3rem, 3vw, 2rem);
+}
+@media (max-width: 900px) {
+  .win-trip .img-container {
+    min-width: 250px;
+  }
+  .win-trip .text-container {
+    height: 250px;
+    margin-left: 6%;
+  }
+  .win-trip .button {
+    font-size: 0.6rem;
+    padding: 3%;
+  }
+}
+@media (max-width: 768px) {
+  .win-trip .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .win-trip .img-container {
+    display: none;
+  }
+  .win-trip .text-container {
+    margin-bottom: 40px;
+    position: relative;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  .win-trip h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-left: 10%;
+    margin-bottom: 30px;
+  }
+  .win-trip .button {
+    padding: 3%;
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: -30%;
+    left: 30%;
+    right: 30%;
+  }
+  .win-trip p {
+    font-size: clamp(0.8rem, 1.6vw, 1rem);
+    text-align: justify;
+  }
+}
+@media (max-width: 550px) {
+  .win-trip h2 {
+    margin-left: 0;
+  }
+  .win-trip p {
+    margin-bottom: 200px;
+  }
 }
 
 .contact-header {
