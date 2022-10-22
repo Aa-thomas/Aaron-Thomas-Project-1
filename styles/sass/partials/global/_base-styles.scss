@@ -15,6 +15,7 @@ button, .button {
    &:hover, &:focus {
       background-color: white;
       color: v.$twilightblue;
+      border: 2px solid v.$twilightblue;
    }
    &.secondary {
       color: white;
