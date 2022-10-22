@@ -34,6 +34,10 @@
          border: none;
          border-bottom: solid 2px v.$dandelion;
          font-size: clamp(0.8rem, 1.6vw, 1rem);
+         &::placeholder {
+            color: v.$white;
+            opacity: 1;
+         }
       }
 
       textarea {
