@@ -3,19 +3,70 @@
 .comments {
    display: flex;
    flex-direction: column;
+   gap: 30px;
+   padding-left: 10%;
+   padding-right: 10%;
+   padding-bottom: 0;
+   
+   .ali {
+      margin-bottom: 100px;
+   }
+
+   .lisa {
+      margin-bottom: 20px;
+   }
 
    .comment-container {
       display: flex;
       font-display: column;
       gap: 20px;
+      cursor: pointer;
+      transition: 0.2s;
+      &:hover, &:focus {
+         transform: scale(1.03);
+         transition: 0.2s;
+      }      
 
       .text-container {
          display: flex;
          flex-direction: column;
       }
+
+      .img-container {
+         min-width: 80px;
+      }
+
+      h4 {
+         font-family: v.$bodyfont;
+         margin-bottom: 10px;
+         font-weight: 700;
+         font-size: clamp(1rem, 1.8vw, 1.2rem);
+      }
+
+      p {
+         font-size: clamp(0.8rem, 1.5vw, 1.1rem);
+         font-weight: 400;
+      }
    }
 
    @media (max-width: 768px) {
-      // width: 100%;
+      width: 100%;
+      padding-left: 10%;
+      padding-right: 10%;
+      
+      h3 {
+         font-size: 1.5rem;
+      }
+
+      .comment-container {
+
+         h4 {
+            font-size: clamp(0.9rem, 2.8vw, 1.2rem);
+         }
+
+         p {
+            font-size: clamp(0.7rem, 2.2vw, 1rem);
+         }
+      }
    }
 }

@@ -67,7 +67,7 @@
       h2 {
          font-size: clamp(1.5rem, 3vw, 2rem);
          margin-left: 10%;
-         margin-bottom: 30px;
+         margin-bottom: 5%;
       }
 
       .button {
@@ -87,8 +87,11 @@
    }
 
    @media (max-width: 550px) {
+      padding: 25% 0;
+
       h2 {
          margin-left: 0;
+         margin-top: 20%;
       }
 
       p {

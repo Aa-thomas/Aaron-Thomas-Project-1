@@ -254,7 +254,7 @@ button.secondary, .button.secondary {
   background-color: #0d457f;
 }
 button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
-  background-color: white;
+  background-color: #eafefc;
   color: #0d457f;
   border: 2px solid #0d457f;
 }
@@ -308,10 +308,11 @@ h2 {
 
 h3 {
   font-size: 1.8rem;
+  text-transform: uppercase;
 }
 
 h4 {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 p {
@@ -347,6 +348,28 @@ button, .button {
   line-height: 1.2rem;
   text-align: center;
   text-transform: uppercase;
+}
+
+#name::-webkit-input-placeholder, #email::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  font-weight: 100;
+}
+
+#name::-moz-placeholder, #email::-moz-placeholder, textarea::-moz-placeholder {
+  font-weight: 100;
+}
+
+#name:-ms-input-placeholder, #email:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  font-weight: 100;
+}
+
+#name::-ms-input-placeholder, #email::-ms-input-placeholder, textarea::-ms-input-placeholder {
+  font-weight: 100;
+}
+
+#name::placeholder,
+#email::placeholder,
+textarea::placeholder {
+  font-weight: 100;
 }
 
 .home-header {
@@ -390,7 +413,7 @@ button, .button {
 }
 .home-header .img-container {
   min-width: 300px;
-  width: clamp(300px, 40%, 600px);
+  width: clamp(300px, 45%, 600px);
   position: absolute;
   right: 0;
   bottom: -100px;
@@ -410,7 +433,7 @@ button, .button {
     -webkit-transition: 0.2s;
     transition: 0.2s;
     width: 70%;
-    font-size: clamp(2.5rem, 7vw, 3.7rem);
+    font-size: clamp(2.5rem, 6vw, 3.7rem);
   }
 }
 @media (max-width: 950px) {
@@ -650,6 +673,11 @@ button, .button {
 .vacation-days .text-container {
   margin: 50px 0 100px 0;
 }
+@media (max-width: 550px) {
+  .vacation-days {
+    margin-bottom: 20%;
+  }
+}
 
 .win-trip {
   background-color: #eafefc;
@@ -728,7 +756,7 @@ button, .button {
   .win-trip h2 {
     font-size: clamp(1.5rem, 3vw, 2rem);
     margin-left: 10%;
-    margin-bottom: 30px;
+    margin-bottom: 5%;
   }
   .win-trip .button {
     padding: 3%;
@@ -744,8 +772,12 @@ button, .button {
   }
 }
 @media (max-width: 550px) {
+  .win-trip {
+    padding: 25% 0;
+  }
   .win-trip h2 {
     margin-left: 0;
+    margin-top: 20%;
   }
   .win-trip p {
     margin-bottom: 200px;
@@ -1028,6 +1060,8 @@ button, .button {
   }
   .blog-header h1 {
     text-align: center;
+    position: relative;
+    top: 15vh;
   }
 }
 
@@ -1038,6 +1072,7 @@ button, .button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 100px;
 }
 @media (max-width: 768px) {
   .full-page-flex {
@@ -1045,6 +1080,132 @@ button, .button {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    gap: 0;
+  }
+}
+
+aside {
+  width: 45%;
+  height: 45%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 100px;
+}
+aside .img-container {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+}
+aside .text-background {
+  background-color: #0d457f;
+  padding: 100% 10% 10% 10%;
+  height: 95%;
+  position: relative;
+  left: 20px;
+  top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
+aside h3 {
+  color: #fdd908;
+  margin-bottom: 10px;
+  font-size: clamp(1.1rem, 2.8vw, 1.6rem);
+}
+aside p, aside li {
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-size: clamp(0.8rem, 1.6vw, 1rem);
+}
+aside li {
+  list-style: circle;
+  list-style-position: inside;
+  padding-bottom: 5px;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+aside li:hover, aside li:focus {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border-bottom: solid 2px #fdd908;
+}
+@media (max-width: 768px) {
+  aside {
+    width: 100%;
+    margin-top: 0;
+  }
+  aside .img-container {
+    display: none;
+  }
+  aside .text-background {
+    position: static;
+    padding: 10%;
+  }
+  aside h3 {
+    font-size: 1.5rem;
+  }
+}
+
+.blog {
+  width: 100%;
+  padding: 0;
+  position: relative;
+  bottom: 100px;
+}
+.blog .img-container-blog {
+  -webkit-box-shadow: -20px 20px #fdd908;
+          box-shadow: -20px 20px #fdd908;
+  width: calc(100% - 20px);
+  position: relative;
+  left: 20px;
+}
+.blog .blog-post {
+  border-left: solid 2px #fdd908;
+  border-bottom: solid 2px #fdd908;
+  padding: 100px 10%;
+}
+.blog .blog-post .text-container {
+  width: 100%;
+}
+.blog .blog-post p {
+  margin: 10px 0;
+}
+@media (max-width: 768px) {
+  .blog {
+    position: static;
+    margin: 0;
+    padding-bottom: 100px;
+  }
+  .blog .blog-post {
+    width: 100%;
+    padding: 0 10%;
+    border: none;
+  }
+  .blog .blog-post .text-container {
+    padding-right: 0;
+  }
+  .blog .blog-post h2 {
+    margin: 40px 0 20px 0;
+  }
+  .blog .img-container-blog {
+    -webkit-box-shadow: 0 20px #fdd908;
+            box-shadow: 0 20px #fdd908;
+    position: static;
+    width: 100%;
   }
 }
 
@@ -1056,6 +1217,16 @@ button, .button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 30px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 0;
+}
+.comments .ali {
+  margin-bottom: 100px;
+}
+.comments .lisa {
+  margin-bottom: 20px;
 }
 .comments .comment-container {
   display: -webkit-box;
@@ -1063,6 +1234,15 @@ button, .button {
   display: flex;
   font-display: column;
   gap: 20px;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.comments .comment-container:hover, .comments .comment-container:focus {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 .comments .comment-container .text-container {
   display: -webkit-box;
@@ -1073,6 +1253,36 @@ button, .button {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.comments .comment-container .img-container {
+  min-width: 80px;
+}
+.comments .comment-container h4 {
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+}
+.comments .comment-container p {
+  font-size: clamp(0.8rem, 1.5vw, 1.1rem);
+  font-weight: 400;
+}
+@media (max-width: 768px) {
+  .comments {
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .comments h3 {
+    font-size: 1.5rem;
+  }
+  .comments .comment-container h4 {
+    font-size: clamp(0.9rem, 2.8vw, 1.2rem);
+  }
+  .comments .comment-container p {
+    font-size: clamp(0.7rem, 2.2vw, 1rem);
+  }
+}
+
 .blog-form {
   position: relative;
 }
@@ -1087,7 +1297,6 @@ button, .button {
   padding-top: 50px;
   background-color: #eafefc;
   gap: 50px;
-  min-width: 400px;
   max-width: 700px;
 }
 .blog-form form .name-email-flex {
@@ -1131,6 +1340,7 @@ button, .button {
   padding: 20px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  color: #0d457f;
 }
 .blog-form form textarea:focus, .blog-form form textarea:hover {
   -webkit-transform: scale(1.03);
@@ -1141,7 +1351,7 @@ button, .button {
 .blog-form form input#email {
   width: 48%;
   padding: 10px 20px;
-  color: rgb(255, 255, 255);
+  color: #0d457f;
   opacity: 10;
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -1164,6 +1374,17 @@ button, .button {
 }
 @media (max-width: 768px) {
   .blog-form form form {
+    width: 100%;
+    min-width: 200px;
+  }
+  .blog-form form .name-email-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
+  .blog-form form input#name, .blog-form form input#email {
     width: 100%;
   }
 }

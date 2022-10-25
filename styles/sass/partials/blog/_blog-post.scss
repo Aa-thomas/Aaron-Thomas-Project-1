@@ -1,0 +1,58 @@
+@use '../global/variables' as v;
+
+.blog {
+   width: 100%;
+   padding: 0;
+   position: relative;
+   bottom: 100px;
+
+   .img-container-blog {
+      box-shadow: -20px 20px v.$dandelion;
+      width: calc(100% - 20px);
+      position: relative;
+      left: 20px;
+   }
+   
+   .blog-post {
+      border-left: solid 2px v.$dandelion;
+      border-bottom: solid 2px v.$dandelion;
+      padding: 100px 10%;
+   
+      .text-container {
+         width: 100%;
+      }
+
+      p {
+         margin: 10px 0;
+      }
+
+   }
+
+   @media (max-width: 768px) {
+      position: static;
+      margin: 0;
+      padding-bottom: 100px;
+      
+      .blog-post {
+         width: 100%;
+         padding: 0 10%;
+         border: none;
+
+         .text-container {
+            padding-right: 0;
+         }
+
+         h2 {
+            margin: 40px 0 20px 0;
+         }
+         
+      }
+
+      .img-container-blog {
+         box-shadow: 0 20px v.$dandelion;
+         position: static;
+         width: 100%;
+      }
+
+   }
+}

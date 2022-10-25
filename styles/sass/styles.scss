@@ -17,5 +17,7 @@
 
 // Blog
 @use './partials/blog/blog-header';
+@use './partials/blog/blog-aside';
+@use './partials/blog/blog-post';
 @use './partials/blog/comments';
 @use './partials/blog/blog-form';

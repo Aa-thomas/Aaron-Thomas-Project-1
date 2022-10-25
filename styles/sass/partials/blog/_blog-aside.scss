@@ -1,0 +1,71 @@
+@use '../global/variables' as v;
+
+aside {
+   width: 45%;
+   height: 45%;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   margin-top: 100px;
+
+   .img-container {
+      position: absolute;
+      z-index: 10;
+      width: 100%;
+   }
+
+   .text-background {
+      background-color: v.$twilightblue;
+      padding: 100% 10% 10% 10%;
+      height: 95%;
+      position: relative;
+      left: 20px;
+      top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+   }
+
+   h3 {
+      color: v.$dandelion;
+      margin-bottom: 10px;
+      font-size: clamp(1.1rem, 2.8vw, 1.6rem);
+   }
+
+   p, li {
+      color: v.$white;
+      margin-bottom: 10px;
+      font-size: clamp(0.8rem, 1.6vw, 1rem);
+   }
+
+   li {
+      list-style: circle;
+      list-style-position: inside;
+      padding-bottom:  5px;
+      cursor: pointer;
+      transition: 0.2s;
+      &:hover, &:focus {
+         transform: scale(1.03);
+         transition: 0.2s;
+         border-bottom: solid 2px v.$dandelion;
+      } 
+   }
+
+   @media (max-width: 768px) {
+      width: 100%;
+      margin-top: 0;
+
+      .img-container {
+         display: none;
+      }
+
+      .text-background {
+         position: static;
+         padding: 10%;
+      }
+
+      h3 {
+         font-size: 1.5rem;
+      }
+   }
+}

@@ -8,8 +8,6 @@
       padding-top: 50px;
       background-color: v.$iceblue;
       gap: 50px;
-
-      min-width: 400px;
       max-width: 700px;
       
    
@@ -35,6 +33,7 @@
          border: solid 2px v.$dandelion;
          padding: 20px;
          transition: 0.2s;
+         color: v.$twilightblue;
          &:focus,&:hover {
             transform: scale(1.03);
             border-width: 3px;
@@ -45,7 +44,7 @@
       input#email {
          width: 48%;
          padding: 10px 20px;
-         color: rgba(255, 255, 255, );
+         color: v.$twilightblue;
          opacity: 10;
          transition: 0.2s;
          &:focus,
@@ -66,6 +65,16 @@
    
       @media (max-width: 768px) {
          form {
+            width: 100%;
+            min-width: 200px;
+         }
+
+         .name-email-flex {
+            flex-direction: column;
+            gap: 20px;
+         }
+
+         input#name, input#email {
             width: 100%;
          }
       }

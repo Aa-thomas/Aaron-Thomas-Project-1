@@ -38,7 +38,7 @@
 
    .img-container {
       min-width: 300px;
-      width: clamp(300px, 40%, 600px);
+      width: clamp(300px, 45%, 600px);
       position: absolute;
       right: 0;
       bottom: -100px;
@@ -58,7 +58,7 @@
       h1 {
          transition: 0.2s;
          width:70%;
-         font-size: clamp(2.5rem, 7vw, 3.7rem);
+         font-size: clamp(2.5rem, 6vw, 3.7rem);
       }
    }
 
