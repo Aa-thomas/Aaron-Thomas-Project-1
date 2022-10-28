@@ -15,23 +15,26 @@
    }
 
    .slide {
-      width: 30%;
+      width: 100%;
       position: absolute;
       inset: 0;
       opacity: 0;
-      transition: opacity 0.2s ease-in-out;
+      transition: 0.2s ease-in-out;
+      // transform: translateX(100%);
    }
 
    .slide[data-active] {
       opacity: 1;
-      transition: opacity 0.2s ease-in-out;
+      transition: 0.2s ease-in-out;
       transition-delay: 0.2s;
+      // transform: translateX(100%);
    }
 
    .slide > img {
       display: block;
       width: 100%;
       height: 100%;
+      object-position: 25% 65%;
    }
 
    .carousel-button {
