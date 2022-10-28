@@ -19,14 +19,15 @@
       position: absolute;
       inset: 0;
       opacity: 0;
-      transition: 0.2s ease-in-out;
+      transition: 0.3s ease-in-out;
+      transition-delay: 0.2s;
       // transform: translateX(100%);
    }
 
    .slide[data-active] {
       opacity: 1;
-      transition: 0.2s ease-in-out;
-      transition-delay: 0.2s;
+      transition: 0.3s ease-in-out;
+      
       // transform: translateX(100%);
    }
 
