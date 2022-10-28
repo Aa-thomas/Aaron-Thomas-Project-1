@@ -10,6 +10,7 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@1&family=Roboto:ital,wght@0,300;1,400&display=swap" rel="stylesheet"> 
    <link rel="stylesheet" href="./styles/styles.css">
+   <script src="./scripts.js" defer></script>
 </head>
 <body>
    <header class="home-header">
@@ -116,7 +117,6 @@
          <div class="wrapper">
 
             
-            
             <!-- Text Container -->
             <div class="text-container">
                <h2>Extra Vacation Days</h2>
@@ -132,6 +132,8 @@
             </div>
 
       </section><!-- END .VACATION-DAYS SECTION -->
+
+
 
       <!-- .WIN-TRIP SECTION -->
       <section class="win-trip">
@@ -156,28 +158,26 @@
 
 
       <!-- .GALLERY SECTION -->
-      <section class="gallery">
+      <section class="gallery" aria-label="Gallery of Photos">
          <div class="wrapper">
-
-            <!-- Image Container -->
-            <div class="img-container">
-               <img src="./Boat-Ride-Adventures-final-assets/home-image-3@2x.jpg" alt="A view of the railings and sails of a boat">
-            </div>
-
-            <!-- Image Container -->
-            <div class="img-container">
-               <img src="./Boat-Ride-Adventures-final-assets/home-image-1@2x.jpg" alt="A white boat in blue waters">
-            </div>
-
-            <!-- Image Container -->
-            <div class="img-container">
-               <img src="./Boat-Ride-Adventures-final-assets/home-image-2@2x.jpg" alt="A ciew of the railing on right side of boat">
-            </div>
-
+            <div class="carousel" data-carousel>
+               <button class="carousel-button prev" data-carousel-button="prev">&lt;</button>
+               <button class="carousel-button next" data-carousel-button="next">&gt;</button>
+               <ul data-slides>
+                  <li class="slide" data-active>
+                     <img src="./Boat-Ride-Adventures-final-assets/home-image-3@2x.jpg" alt="A view of the railings and sails of a boat">
+                  </li>               
+                  <li class="slide">
+                     <img src="./Boat-Ride-Adventures-final-assets/home-image-1@2x.jpg" alt="A white boat in blue waters">
+                  </li>               
+                  <li class="slide">
+                     <img src="./Boat-Ride-Adventures-final-assets/home-image-2@2x.jpg" alt="A ciew of the railing on right side of boat">
+                  </li>
+               </ul>
+            </div><!-- END .carousel -->
          </div><!-- END .wrapper -->
       </section><!-- END .GALLERY SECTION -->
    </main>
    <footer>Copyright @ 2019 HackerYou</footer>
 </body>
-<script src="./scripts.js"></script>
 </html>
